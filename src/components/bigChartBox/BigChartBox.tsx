@@ -1,7 +1,6 @@
 import {
   Area,
   AreaChart,
-  CartesianGrid,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -57,7 +56,7 @@ const data = [
 const BigChartBox = () => {
   return (
     <div className='bigChartBox'>
-      <h1>Revenue Analytics</h1>
+      <h1 style={{ marginBottom: '1rem' }}>Revenue Analytics</h1>
       <div className='chart'>
         <ResponsiveContainer width='99%' height='100%'>
           <AreaChart
