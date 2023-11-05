@@ -22,7 +22,7 @@ const DataTable = (props: Props) => {
   const actionColumn: GridColDef = {
     field: 'action',
     headerName: 'Action',
-    width: 200,
+    width: 100,
     renderCell: (params) => (
       <div className='action'>
         <Link to={`/${props.slug}/${params.row.id}`}>

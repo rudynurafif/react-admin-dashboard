@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import { GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import DataTable from '../../components/dataTable/DataTable';
 import './users.scss';
 import { userRows } from '../../data';
+import AddModal from '../../components/addModal/AddModal';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', width: 50 },
   {
     field: 'img',
     headerName: 'Avatar',
@@ -40,25 +42,28 @@ const columns: GridColDef[] = [
   {
     field: 'createdAt',
     headerName: 'Created At',
-    width: 200,
+    width: 150,
     type: 'string',
   },
   {
     field: 'verified',
     headerName: 'Verified',
-    width: 150,
+    width: 100,
     type: 'boolean',
   },
 ];
 
 const Users = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className='users'>
       <div className='info'>
         <h1>Users</h1>
-        <button>Add New User</button>
+        <button onClick={() => {setOpen(true)}}>Add New User</button>
       </div>
       <DataTable columns={columns} rows={userRows} slug='users' />
+      {open && <AddModal slug='User' columns={columns} setOpen={setOpen} />}
     </div>
   );
 };
