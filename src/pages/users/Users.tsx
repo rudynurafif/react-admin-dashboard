@@ -6,7 +6,7 @@ import { userRows } from '../../data';
 import AddModal from '../../components/addModal/AddModal';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 50 },
+  { field: 'id', headerName: 'ID', width: 90 },
   {
     field: 'img',
     headerName: 'Avatar',
@@ -48,7 +48,7 @@ const columns: GridColDef[] = [
   {
     field: 'verified',
     headerName: 'Verified',
-    width: 100,
+    width: 150,
     type: 'boolean',
   },
 ];

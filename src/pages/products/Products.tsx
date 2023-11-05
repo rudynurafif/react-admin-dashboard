@@ -30,18 +30,18 @@ const columns: GridColDef[] = [
     field: 'price',
     type: 'string',
     headerName: 'Price',
-    width: 200,
+    width: 150,
   },
   {
     field: 'producer',
     headerName: 'Producer',
     type: 'string',
-    width: 200,
+    width: 150,
   },
   {
     field: 'createdAt',
     headerName: 'Created At',
-    width: 200,
+    width: 150,
     type: 'string',
   },
   {
